@@ -11,9 +11,9 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>U21MI504 | Unmanned Aerial Vehicle Technology</title>
+  <title>U21MI503 | Unmanned Aerial Vehicle Technology</title>
   <style>
-    :root { color-scheme: light; --navy: #17324d; --teal: #2b7a78; --orange: #e56b2f; --ivory: #f5f2ea; }
+    :root { color-scheme: light; --navy: #17324d; --teal: #2b7a78; --orange: #e56b2f; --ivory: #f5f2ea; --cyan: #00adb5; }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: Arial, sans-serif; color: var(--navy); background: var(--ivory); }
     header { padding: 4rem 1.25rem 3rem; color: white; background: linear-gradient(135deg, var(--navy), var(--teal)); }
@@ -23,12 +23,17 @@
     .intro { max-width: 660px; margin: 1rem 0 0; font-size: 1.1rem; line-height: 1.6; }
     h2 { margin: 0 0 1rem; font-size: 1.35rem; }
     .section-heading { margin-top: 2.75rem; }
-    .modules { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
-    .module { display: block; padding: 1.5rem; border: 1px solid #d9d2c7; border-left: 7px solid var(--orange); border-radius: 10px; background: #fffdf8; color: inherit; text-decoration: none; box-shadow: 0 6px 18px rgba(23, 50, 77, .08); }
-    .module:hover, .module:focus { border-color: var(--teal); outline: 3px solid rgba(43, 122, 120, .2); }
+    .modules { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+    .module { display: block; padding: 1.5rem; border: 1px solid #d9d2c7; border-left: 7px solid var(--orange); border-radius: 10px; background: #fffdf8; color: inherit; text-decoration: none; box-shadow: 0 6px 18px rgba(23, 50, 77, .08); transition: transform 0.2s, box-shadow 0.2s; }
+    .module:hover, .module:focus { border-color: var(--teal); outline: 3px solid rgba(43, 122, 120, .2); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(23, 50, 77, .12); }
+    .module.lab-highlight { border-left-color: var(--cyan); background: #f0fdfa; border-color: #99f6e4; }
     .module.quiz { border-left-color: var(--teal); }
     .module-number { margin: 0; color: var(--orange); font-weight: 700; letter-spacing: .06em; }
+    .lab-highlight .module-number { color: #0d9488; }
     .quiz .module-number { color: var(--teal); }
+    .resource-list { margin-top: 1.25rem; padding: 1rem 1.25rem; border: 1px solid #d9d2c7; border-radius: 10px; background: #fffdf8; line-height: 1.8; }
+    .resource-list p { margin: .25rem 0; }
+    .resource-list a { color: var(--teal); font-weight: 600; }
     .module h3 { margin: .45rem 0; font-size: 1.35rem; }
     .module p { margin: 0; line-height: 1.5; color: #4d5f68; }
     .launch { display: inline-block; margin-top: 1rem; font-weight: 700; color: var(--navy); }
@@ -38,23 +43,62 @@
 <body>
   <header>
     <div style="max-width: 960px; margin: 0 auto;">
-      <p class="course-code">U21MI504</p>
+      <p class="course-code">U21MI503 · REGULATION 2021</p>
       <h1>Unmanned Aerial Vehicle Technology</h1>
-      <p class="intro">Interactive learning modules and unit quizzes for the course. Select an item below to begin.</p>
+      <p class="intro">Interactive learning modules, systems laboratories, and unit quizzes for the course. Select an item below to begin.</p>
     </div>
   </header>
   <main>
-    <h2>Learning modules</h2>
+    <h2>Interactive Learning Modules & Systems Labs</h2>
     <section class="modules" aria-label="Learning modules">
+      <a class="module lab-highlight" href="modules/01-uas-architecture-lab/">
+        <p class="module-number">UNIT I · INTERACTIVE LAB</p>
+        <h3>UAS Systems Architecture Lab</h3>
+        <p>Interactive Foundations & System Boundary Explorer: Multi-axis taxonomy, functional ecosystem assembly, V-Model requirements, tri-band communications, and Capstone mission clearance.</p>
+        <span class="launch">Launch Systems Lab →</span>
+      </a>
+
       <a class="module" href="modules/01-uav-history/">
-        <p class="module-number">MODULE 01</p>
+        <p class="module-number">MODULE 01 · HISTORICAL EVOLUTION</p>
         <h3>History and Development of UAVs</h3>
-        <p>Trace the evolution of unmanned aircraft from preset control to integrated, networked and increasingly autonomous UAS.</p>
+        <p>Trace the evolution of unmanned aircraft from preset mechanical control to integrated, networked, and autonomous systems.</p>
         <span class="launch">Launch module →</span>
       </a>
     </section>
 
-    <h2 class="section-heading">Unit quizzes</h2>
+    <h2 class="section-heading">Student Resources</h2>
+    <section class="modules" aria-label="Student resources">
+      <a class="module" href="resources/slides/U21MI504_Unit_III_Part_B_Interactive_60_Minute_Class.pdf">
+        <p class="module-number">UNIT III · SLIDES</p>
+        <h3>Current Drones, Use Cases and Business Value</h3>
+        <p>Energy sources, hybrid propulsion, propeller scaling, payloads, RTK/PPK, NDVI and ROI.</p>
+        <span class="launch">Open PDF →</span>
+      </a>
+      <a class="module" href="resources/slides/U21MI504_Unit_V_Interactive_60_Minute_Class.pdf">
+        <p class="module-number">UNIT V · SLIDES</p>
+        <h3>Drone Flying and Operations</h3>
+        <p>ConOps, risk, flight modes, failsafes, control loops, safe operations, logs and DGCA rules.</p>
+        <span class="launch">Open PDF →</span>
+      </a>
+      <a class="module lab-highlight" href="resources/guides/U21MI504_Lab_ArduPilot_SITL_Flight_Modes_Failsafes_Logs.pdf">
+        <p class="module-number">UNIT V · SIMULATOR LAB</p>
+        <h3>ArduPilot Simulator Lab</h3>
+        <p>Fly flight modes, a geofence and return-to-launch in SITL, inject failures, then analyze your own logs.</p>
+        <span class="launch">Open lab sheet →</span>
+      </a>
+      <a class="module" href="resources/guides/U21MI504_Quick_Start_Mission_Planner_QGroundControl.pdf">
+        <p class="module-number">GUIDE</p>
+        <h3>Mission Planner and QGroundControl Quick-Start</h3>
+        <p>Where everything is on the ground station screens, and the checks before you arm.</p>
+        <span class="launch">Open guide →</span>
+      </a>
+    </section>
+    <section class="resource-list" aria-label="Cheat sheets and posters">
+      <p><strong>Cheat sheets:</strong> <a href="resources/sheets/U21MI504_Unit_I_Cheat_Sheet.pdf">Unit I cheat sheet</a> · <a href="resources/sheets/U21MI504_Unit_II_Cheat_Sheet.pdf">Unit II cheat sheet</a> · <a href="resources/sheets/U21MI504_Unit_III_Cheat_Sheet.pdf">Unit III cheat sheet</a> · <a href="resources/sheets/U21MI504_Unit_IV_Revision_Sheet.pdf">Unit IV revision sheet</a> · <a href="resources/sheets/U21MI504_Unit_V_Revision_Sheet.pdf">Unit V revision sheet</a> · <a href="resources/sheets/U21MI504_UAV_Acronym_Glossary.pdf">Acronym glossary</a></p>
+      <p><strong>Posters:</strong> <a href="resources/posters/Poster_Flight_Modes.pdf">Flight modes</a> · <a href="resources/posters/Poster_Failsafe_Flowchart.pdf">Failsafe flowchart</a> · <a href="resources/posters/Poster_DGCA_Zones_and_Categories.pdf">DGCA zones and categories</a> · <a href="resources/posters/Poster_Quadcopter_Parts.pdf">Quadcopter parts</a> · <a href="resources/posters/Pocket_PreFlight_Card.pdf">Pocket pre-flight card</a></p>
+    </section>
+
+    <h2 class="section-heading">Unit Quizzes</h2>
     <section class="modules" aria-label="Unit quizzes">
       <a class="module quiz" href="quizzes/unit-1/">
         <p class="module-number">UNIT I · 20 MCQs</p>
@@ -92,6 +136,6 @@
       </a>
     </section>
   </main>
-  <footer>Course content prepared for U21MI504.</footer>
+  <footer>Course content prepared for U21MI503 · Department of Mechatronics Engineering.</footer>
 </body>
 </html>

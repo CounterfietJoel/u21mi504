@@ -4,12 +4,14 @@ GitHub Pages deployment files for the course's interactive Storyline modules.
 
 ## Published items
 
+- `modules/01-uas-architecture-lab/` - UAS Systems Architecture Lab
 - `modules/01-uav-history/` - History and Development of UAVs
 - `quizzes/unit-1/` - Unit I Quiz
 - `quizzes/unit-2/` - Unit II Quiz
 - `quizzes/unit-3/` - Unit III Quiz
 - `quizzes/unit-4/` - Unit IV Quiz
 - `quizzes/unit-5/` - Unit V Quiz
+- `resources/` - Student resources (PDF slides, simulator lab, quick-start, cheat sheets, posters). Editable sources stay in the course folder.
 
 Each item has its own folder URL and launches independently.
 
